@@ -266,11 +266,11 @@ BODY progn"
 ;;;###autoload
 (define-minor-mode flow-minor-mode
   "Flow mode"
-  nil " Flow" flow-minor-mode-map
-  (if flow-minor-mode
-      (progn
-        (setq-local eldoc-documentation-function 'flow-minor-eldoc-documentation-function)
-        (eldoc-mode))))
+  nil " Flow" flow-minor-mode-map)
+  ;; (if flow-minor-mode
+  ;;     (progn
+  ;;       (setq-local eldoc-documentation-function 'flow-minor-eldoc-documentation-function)
+  ;;       (eldoc-mode))))
 
 (defun flow-minor-tag-present-p ()
   "Return true if the '// @flow' tag is present in the current buffer."
